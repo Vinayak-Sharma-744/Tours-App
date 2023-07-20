@@ -9,7 +9,7 @@ const Tours = (props) => {
 				<h2>All Tours</h2>
 			</div>
 			<div>
-				{props.tours.map((tour, index) => {
+				{props.tours.map((tour) => {
                 return <Tour id={tour.id} name={tour.name} image={tour.image} info={tour.info} price={tour.price} />
             })}
 			</div>
