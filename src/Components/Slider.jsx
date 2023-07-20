@@ -9,7 +9,7 @@ const Slider = (props) => {
       setSelectedImage((selectedImage) =>
         selectedImage < n ? selectedImage + 1 : 0
       );
-    }, 4000);
+    }, 3000);
   }, []);
   return (
     <div>
