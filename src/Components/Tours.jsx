@@ -1,26 +1,36 @@
 import React from "react";
 import Tour from "./Tour";
+import { useEffect, useState } from "react";
 
 const Tours = (props) => {
+
+  const n = props.tours.length;
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  useEffect(() => {
+    setInterval(() => {
+      setSelectedIndex((selectedIndex) =>
+        selectedIndex < n ? selectedIndex + 1 : 0
+      );
+    }, 10000);
+  }, []);
+
+
   return (
-    <section>
-      <div className="title">
-        <h2>All Tours</h2>
-      </div>
+    <div className="Tours">
+
+      <h2>All Tours</h2>
+
       <div>
-        {props.tours.map((tour) => {
-          return (
-            <Tour
-              id={tour.id}
-              name={tour.name}
-              image={tour.image}
-              info={tour.info}
-              price={tour.price}
-            />
-          );
-        })}
+        <Tour
+          id={props.tours[selectedIndex].id}
+          name={props.tours[selectedIndex].name}
+          image={props.tours[selectedIndex].image}
+          info={props.tours[selectedIndex].info}
+          price={props.tours[selectedIndex].price}
+        />
       </div>
-    </section>
+    </div>
   );
 };
 
