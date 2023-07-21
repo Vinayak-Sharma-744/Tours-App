@@ -23,7 +23,6 @@ const Tours = (props) => {
 
       <div>
         <Tour
-          id={props.tours[selectedIndex].id}
           name={props.tours[selectedIndex].name}
           image={props.tours[selectedIndex].image}
           info={props.tours[selectedIndex].info}
