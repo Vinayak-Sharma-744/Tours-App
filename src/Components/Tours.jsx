@@ -3,7 +3,6 @@ import Tour from "./Tour";
 import { useEffect, useState } from "react";
 
 const Tours = (props) => {
-
   const n = props.tours.length;
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -15,15 +14,12 @@ const Tours = (props) => {
     }, 5000);
   }, []);
 
-
   return (
     <div className="Tours">
-
       <h2>All Tours</h2>
 
       <div>
         <Tour
-          id={props.tours[selectedIndex].id}
           name={props.tours[selectedIndex].name}
           image={props.tours[selectedIndex].image}
           info={props.tours[selectedIndex].info}
