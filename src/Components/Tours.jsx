@@ -12,7 +12,7 @@ const Tours = (props) => {
       setSelectedIndex((selectedIndex) =>
         selectedIndex < n ? selectedIndex + 1 : 0
       );
-    }, 10000);
+    }, 5000);
   }, []);
 
 
