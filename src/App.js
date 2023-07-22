@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Loading from "./Components/Loading";
 import Tours from "./Components/Tours";
-
-
+import './App.css'
 const url = "https://course-api.com/react-tours-project";
 
 function App() {
@@ -34,8 +33,10 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>Welcome To My Tours &Travels</h1>
+    <div className="main">
+      <h1 >Welcome To Our Tours & Travels</h1>
+      <div className="App"></div>
+  
       <Tours tours={tours} />
     </div>
   );
